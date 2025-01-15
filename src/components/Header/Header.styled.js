@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 export const StyledHeader = styled.header`
 position: sticky;
+top: 0;
+z-index: 10;
   display: flex;
   flex-direction: row;
   justify-content: center;
