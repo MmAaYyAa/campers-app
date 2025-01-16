@@ -5,6 +5,7 @@ import {selectCampers, selectTotalCampers} from '../../redux/catalog/catalogSele
 import {fetchCampers} from '../../redux/catalog/catalogOperations.js';
 import {clearCatalog} from '../../redux/catalog/catalogSlice.js';
 import {LoadMoreBtn} from '../LoadMoreButton/LoadMoreButton.styled.js';
+import {scrollDown} from '../../utils/utils.js';
 
 export default function LoadMoreButton() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -31,6 +32,7 @@ export default function LoadMoreButton() {
       })
     )
       .unwrap()
+      .then(scrollDown)
       .catch(() => {
         dispatch(clearCatalog());
       });

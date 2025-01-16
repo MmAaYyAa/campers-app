@@ -42,3 +42,10 @@ export const formatLocation = location => {
     }
     return text.substring(0, 61) + '...';
   };
+
+  export const scrollDown = () => {
+    window.scrollBy({
+      top: 500,
+      behavior: 'smooth',
+    });
+  };
