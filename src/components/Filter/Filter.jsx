@@ -5,7 +5,7 @@ import { selectFilters } from '../../redux/filters/filterSelectors';
 import { addFilters, clearFilters } from '../../redux/filters/filterSlice';
 import { clearCatalog } from '../../redux/catalog/catalogSlice';
 import toast from 'react-hot-toast';
-import { equipmentIcons, typeIcons } from '../../utils/utils';
+import { equipmentIcons, typeIcons, formatString  } from '../../utils/utils';
 import icons from '../../assets/icons/sprite.svg';
 import { FormWrapper, StyledInputLocationIcon, InputWrapper, Title, FilterTitle, FilterList, Input, StyledCheckbox, StyledRadio, HiddenInput, ButtonBlock, Button } from '../Filter/Filter.styled';
 
@@ -38,6 +38,7 @@ export default function Filter() {
             camperEquipment: updatedEquipment,
           };
         });
+    }
 
         const handleSubmit = (e) => {
             e.preventDefault();
@@ -78,6 +79,7 @@ export default function Filter() {
 
 
   return (
+    
     <FormWrapper onSubmit={handleSubmit}>
       <Title>Location</Title>
       <InputWrapper>
@@ -94,7 +96,6 @@ export default function Filter() {
           className={formState.location ? 'inputFilled' : 'inputEmpty'}
         />
       </InputWrapper>
-
       <Title>Filters</Title>
       <FilterTitle>Vehicle Equipment</FilterTitle>
       <FilterList>
@@ -107,7 +108,7 @@ export default function Filter() {
             <svg>
               <use href={`${icons}#${equipmentIcons[equipment]}`} />
             </svg>
-            <span>{equipment}</span>
+            <span>{formatString(equipment)}</span>
           </StyledCheckbox>
         ))}
       </FilterList>
@@ -124,7 +125,7 @@ export default function Filter() {
             <svg>
               <use href={`${icons}#${typeIcons[type]}`} />
             </svg>
-            <span>{type}</span>
+            <span>{formatString(type)}</span>
           </StyledRadio>
         ))}
       </FilterList>
@@ -132,13 +133,13 @@ export default function Filter() {
       <ButtonBlock>
         <Button
           type="submit"
-          disabled={!formState.location && !formState.camperEquipment.length && !formState.form && !formState.transmission}
+          disabled={!formState.location || !formState.camperEquipment.length || !formState.form ||!formState.transmission}
         >
           Search
         </Button>
         <Button
           type="button"
-          disabled={!formState.location && !formState.truckEquipment.length && !formState.form && !formState.transmission}
+          disabled={!formState.location || !formState.camperEquipment.length || !formState.form || !formState.transmission}
           onClick={handleReset}
         >
           Reset
@@ -147,11 +148,4 @@ export default function Filter() {
     </FormWrapper>
   );
       };
-    
 
-
-
-
-
-
-}

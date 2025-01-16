@@ -6,7 +6,7 @@ export const FormWrapper = styled.form`
   gap: 16px;
 `;
 
-export const Title = styled.h3`
+export const Title = styled.p`
   font-size: 16px;
   line-height: 24px;
   color: var(--gray);
@@ -34,7 +34,7 @@ svg {
 }
 
 &.inputFilled svg {
-    fill: var(--color-text); 
+    fill: var(--main); 
   }
  `;
 
@@ -43,7 +43,7 @@ export const Input = styled.input`
   border: none;
   border-radius: 12px;
   padding: 16px 16px 16px 48px; 
-  background-color: var(--color-inputs);
+  background-color: var(--inputs);
   color: var(--gray); 
   transition: color 0.3s;
 
@@ -58,20 +58,20 @@ export const Input = styled.input`
   }
 
   &.inputFilled {
-    color: var(--color-text); 
+    color: var(--main); 
   }
 
   &.inputFilled::placeholder {
-    color: var(--color-text); 
+    color: var(--main); 
   }
 `;
 
-export const FilterTitle = styled.h4`
+export const FilterTitle = styled.h3`
   font-weight: 600;
   font-size: 20px;
   line-height: 120%;
   margin: 32px 0 24px;
-  color: var(--color-text);
+  color: var(--main);
 `;
 
 
@@ -82,7 +82,7 @@ export const FilterList = styled.div`
   width: 360px;
   padding-top: 24px;
   margin-bottom: 40px;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--gray-light);
 `;
 
 const sharedStyle = css`
@@ -92,10 +92,10 @@ const sharedStyle = css`
   justify-content: center;
   width: 100px;
   height: 80px;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--gray-light);
   border-radius: 12px;
-  background-color: var(--color-background);
-  color: var(--color-text);
+  background-color: var(--white);
+  color: var(--main);
   cursor: pointer;
   transition: all 0.3s;
 
@@ -114,13 +114,13 @@ const sharedStyle = css`
   }
 
   &:hover {
-    border-color: var(--color-button);
+    border-color: var(--button);
   }
 
   ${(props) =>
     props.checked &&
     css`
-      border-color: var(--color-button);
+      border-color: var(--button);
     `}
     
 `;
@@ -150,16 +150,16 @@ width: 130px;
 padding: 12px 24px;
   border: none;
   border-radius: 200px;
-  background-color: ${(props) => (props.disabled ? 'var(--color-border)' : 'var(--color-button)')};
+  background-color: ${(props) => (props.disabled ? 'var(--badges)' : 'var(--button)')};
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  color: var(--color-background);
+  color: var(--white);
   cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease, transform 0.2s ease;
 
   &:hover {
-    background-color: ${(props) => (props.disabled ? 'var(--color-border)' : 'var(--color-button-hover)')};
+    background-color: ${(props) => (props.disabled ? 'var(--gray-light)' : 'var(--button-hover)')};
   }
 `;

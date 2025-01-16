@@ -5,7 +5,8 @@ import Loader from '../../components/Loader/Loader';
 import Error from '../../components/Error/Error';
 import { fetchCampers } from '../../redux/catalog/catalogOperations.js';
 import { selectFilters } from '../../redux/filters/filterSelectors';
-import Filter from '../../components/Filter/Filter.jsx';
+import Filter from '../../components/Filter/Filter';
+import CamperList from '../../components/CamperList/CamperList.jsx';
 import {Container, Wrapper} from '../CatalogPage/CatalogPage.styled';
 export default function CatalogPage() {
     const isLoading = useSelector(selectLoading);
@@ -24,8 +25,8 @@ export default function CatalogPage() {
           {isError && <Error />}
           <Filter />
           <Wrapper>
-          {/* {campers.length > 0 && <CamperList />}
-          {campers.length > 0 && <LoadMoreBtn />} */}
+          {campers.length > 0 && <CamperList />}
+          {/* {campers.length > 0 && <LoadMoreBtn />} */}
         </Wrapper>
         {/* <ScrollToTopButton /> */}
         </Container>
