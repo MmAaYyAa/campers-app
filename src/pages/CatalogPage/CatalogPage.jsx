@@ -9,6 +9,7 @@ import Filter from '../../components/Filter/Filter';
 import CamperList from '../../components/CamperList/CamperList.jsx';
 import {Container, Wrapper} from '../CatalogPage/CatalogPage.styled';
 import LoadMoreBtn from '../../components/LoadMoreButton/LoadMoreButton';
+import ScrollToTopButton from '../../components/ScrollToTopButton/ScrollToTopButton.jsx';
 
 export default function CatalogPage() {
     const isLoading = useSelector(selectLoading);
@@ -30,7 +31,7 @@ export default function CatalogPage() {
           {campers.length > 0 && <CamperList />}
           {campers.length > 0 && <LoadMoreBtn />}
         </Wrapper>
-        {/* <ScrollToTopButton /> */}
+        <ScrollToTopButton />
         </Container>
       );
 }
