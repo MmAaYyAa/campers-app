@@ -8,6 +8,8 @@ import { selectFilters } from '../../redux/filters/filterSelectors';
 import Filter from '../../components/Filter/Filter';
 import CamperList from '../../components/CamperList/CamperList.jsx';
 import {Container, Wrapper} from '../CatalogPage/CatalogPage.styled';
+import LoadMoreBtn from '../../components/LoadMoreButton/LoadMoreButton';
+
 export default function CatalogPage() {
     const isLoading = useSelector(selectLoading);
     const isError = useSelector(selectError);
@@ -26,7 +28,7 @@ export default function CatalogPage() {
           <Filter />
           <Wrapper>
           {campers.length > 0 && <CamperList />}
-          {/* {campers.length > 0 && <LoadMoreBtn />} */}
+          {campers.length > 0 && <LoadMoreBtn />}
         </Wrapper>
         {/* <ScrollToTopButton /> */}
         </Container>
