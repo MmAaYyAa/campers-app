@@ -1,4 +1,6 @@
-
+import { useDispatch, useSelector } from 'react-redux';
+import {addFavorite, removeFavorite} from '../../redux/favorites/favoritesSlice';
+import { selectFavorites } from '../../redux/favorites/favoritesSelector';
 import { formatLocation, formatPrice, truncateText } from '../../utils/utils';
 import icons from '../../assets/icons/sprite.svg';
 import {CardContainer, InfoContainer, Img, TitleBox, PriceBox, HeartButton,  ReviewBox, Review, TextReview, Location, StarStyled, MapStyled, Text, List, Item,Btn } from '../CamperCard/CamperCard.styled'
@@ -21,6 +23,19 @@ export default function CamperCard ({
         location,
       },
 }) {
+  const dispatch = useDispatch();
+  const favorites = useSelector(selectFavorites);
+  console.log("favorites: ",favorites)
+
+  const isFavorite = favorites.includes(id);
+  console.log('isFavorite:', isFavorite);
+  const handleFavoriteToggle = () => {
+    if (isFavorite) {
+      dispatch(removeFavorite(id));
+    } else {
+      dispatch(addFavorite(id));
+    }
+  };
     return (
         <CardContainer>
           <Img src={gallery[0].thumb} alt={name} />
@@ -31,10 +46,8 @@ export default function CamperCard ({
                 <h3>{formatPrice(price)}</h3>
                 <HeartButton
                    type="button"
-                //    onClick={handleFavoriteToggle}
-                //    $isFavorite={isFavorite}
-                //    aria-label="Toggle Favorite"
-  >
+                  onClick={handleFavoriteToggle}
+                   $isFavorite={isFavorite}>
     <svg>
         <use href={`${icons}#icon-heart`} />
     </svg>

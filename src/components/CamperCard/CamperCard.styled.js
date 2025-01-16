@@ -48,7 +48,7 @@ background: transparent;
 svg{
   width: 24px;
   height: 21px;
-  fill: ${({ $isFavorite }) => $isFavorite ?"var(--color-button)" : "transparent"};
+  fill: ${({ $isFavorite }) => $isFavorite ?"var(--button)" : "transparent"};
   stroke: ${({ $isFavorite }) => ($isFavorite ? "none" :"var(--gray)" )};
   transition: fill 0.3s ease, stroke 0.3s ease;
 }
