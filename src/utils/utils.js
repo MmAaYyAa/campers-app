@@ -49,3 +49,13 @@ export const formatLocation = location => {
       behavior: 'smooth',
     });
   };
+
+  export const formatDimension = dimension => {
+    const match = dimension.match(/([\d.]+)/);
+    const unit = dimension.includes('m')
+      ? 'm'
+      : dimension.includes('l')
+      ? 'l'
+      : '';
+    return match ? `${match[0]} ${unit}` : '';
+  };

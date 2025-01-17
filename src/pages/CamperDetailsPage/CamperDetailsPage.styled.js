@@ -24,4 +24,42 @@ export const LinkBack = styled(NavLink)`
    :focus {
     border: 1px solid var(--button-hover);
   }
-`
+`;
+
+export const Container = styled.main`
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 48px 64px 80px;
+`;
+
+export const MainContent = styled.div`
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 24px;
+`;
+
+export const ListLinks = styled.ul`
+  display: flex;
+  gap: 40px;
+  width: 100%;
+  padding-bottom: 24px;
+  margin-bottom: 44px;
+  border-bottom: 1px solid var(--gray-light);
+`;
+
+export const LinkItem = styled.li``;
+
+export const NavLinkStyled = styled(NavLink)`
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  padding-bottom: 24px;
+  border-bottom: 5px solid transparent;
+  transition: border-color var(--transition);
+
+  &.active {
+    border-bottom: 5px solid var(--button);
+  }
+`;

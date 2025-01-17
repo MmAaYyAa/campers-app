@@ -51,8 +51,8 @@ body {
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: -0.005em;
-    color: var(--color-text);
-    background-color: var(--color-background);
+    color: var(--main);
+    background-color: var(--white);
 }
 
 h1,

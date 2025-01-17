@@ -34,6 +34,13 @@ fill: var(--color-rating);
   
 `;
 
+export const Map = styled.svg`
+width: 16px;
+height: 16px;
+stroke: var(--main);
+  
+`;
+
 export const ReviewText = styled.p`
 text-decoration: underline;
   
@@ -54,11 +61,6 @@ display: flex;
   
 `;
 
-export const Item = styled.li`
-
-  
-`;
-
 export const Image = styled.img`
  border-radius: 10px;
   width: 292px;
@@ -69,6 +71,6 @@ export const Image = styled.img`
 
 
 export const Description = styled.p`
-color: var(--color-main);
+color: var(--text);
   
 `;
