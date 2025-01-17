@@ -42,7 +42,7 @@ useEffect(() => {
       {transmission === 'automatic' && (
         <ListItem>
          <Icon>
-      <use href={`${icons}#icon-transmission`} />
+      <use href={`${icons}#icon-automatic`} />
       </Icon>
           <p>Automatic</p>
         </ListItem>
@@ -65,14 +65,14 @@ useEffect(() => {
       {kitchen && (
         <ListItem>
           <Icon>
-      <use href={`${icons}#icon-icon-cup-hot`} />
+      <use href={`${icons}#icon-cup-hot`} />
       </Icon>
           Kitchen
         </ListItem>
       )}
       {microwave && (
         <ListItem>
-          <Icon>
+          <Icon className="stroke-icon">
       <use href={`${icons}#icon-microwave`} />
       </Icon>
           <p>Microwave</p>
@@ -112,7 +112,7 @@ useEffect(() => {
       )}
       {water && (
         <ListItem>
-           <Icon>
+           <Icon className="stroke-icon">
       <use href={`${icons}#icon-water`} />
       </Icon>
           <p>Water</p>

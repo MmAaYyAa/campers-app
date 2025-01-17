@@ -13,7 +13,7 @@ const GlobalStyles = createGlobalStyle`
     --inputs: #F7F7F7;
     --white: #FFFFFF;
     --gray-light: #DADDE1;
-    --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition: 300ms ease;
 }
 
 @font-face {

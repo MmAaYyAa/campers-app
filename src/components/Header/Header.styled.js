@@ -10,7 +10,6 @@ z-index: 10;
   justify-content: center;
   align-items: center;
   background-color:  var(--inputs);
-  /* position: relative; */
   width: 100%;
   height: 72px;
   border-bottom: 1px solid var(--badges);

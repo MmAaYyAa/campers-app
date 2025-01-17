@@ -70,7 +70,7 @@ export default function CamperCard ({
             </ReviewBox>
             <Text>{truncateText(description)}</Text>
             <List>
-              {transmission && (
+              {transmission === 'automatic' && (
                 <Item>
                   <svg width={20} height={20}>
                 <use href={`${icons}#icon-automatic`} />

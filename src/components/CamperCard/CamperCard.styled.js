@@ -48,9 +48,8 @@ background: transparent;
 svg{
   width: 24px;
   height: 21px;
-  fill: ${({ $isFavorite }) => $isFavorite ?"var(--button)" : "transparent"};
-  stroke: ${({ $isFavorite }) => ($isFavorite ? "none" :"var(--gray)" )};
-  transition: fill 0.3s ease, stroke 0.3s ease;
+  fill: ${({ $isFavorite }) => $isFavorite ?"var(--button)" : "var(--main)"};
+  transition: fill var(--transition);
 }
 `;
 
@@ -85,7 +84,7 @@ height: 16px;
 export const MapStyled = styled.svg`
 width: 16px;
 height: 16px;
-  fill: var(--main);
+fill: var(--main);
 `;
 
 export const Text = styled.p`

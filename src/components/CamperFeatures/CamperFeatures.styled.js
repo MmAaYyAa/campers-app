@@ -30,6 +30,10 @@ display: flex;
 export const Icon = styled.svg`
 width: 20px;
 height: 20px;
+&.stroke-icon {
+    fill: none;
+    stroke: var(--main);
+  }
  
 `;
 
