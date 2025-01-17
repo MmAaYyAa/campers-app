@@ -15,10 +15,10 @@ import { fetchCamperById } from '../../redux/catalog/catalogOperations.js';
 import { LinkBack, Container,
     MainContent,  ListLinks,
     LinkItem,
-    NavLinkStyled,} from "./CamperDetailsPage.styled"
+    NavLinkStyled, Sidebar} from "./CamperDetailsPage.styled";
+import BookingForm from '../../components/BookingForm/BookingForm';    
 
 export default function CamperDetailsPage() {
-
         const dispatch = useDispatch();
         const camper = useSelector(selectCamperDetails);
         const isLoading = useSelector(selectLoading);
@@ -68,6 +68,9 @@ export default function CamperDetailsPage() {
             <Outlet />
           </Suspense>
           </div>
+          <Sidebar>
+          <BookingForm />
+        </Sidebar>
       </MainContent>
         </Container>
         </>

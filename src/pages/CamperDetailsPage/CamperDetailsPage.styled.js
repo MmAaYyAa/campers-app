@@ -63,3 +63,12 @@ export const NavLinkStyled = styled(NavLink)`
     border-bottom: 5px solid var(--button);
   }
 `;
+
+export const Sidebar = styled.aside`
+  flex: 0 0 360px;
+  padding: 24px;
+  border: 1px solid var(--gray-light);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  background-color: var(--white);
+`;
