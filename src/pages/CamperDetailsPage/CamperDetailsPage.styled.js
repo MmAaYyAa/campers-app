@@ -69,6 +69,5 @@ export const Sidebar = styled.aside`
   padding: 24px;
   border: 1px solid var(--gray-light);
   border-radius: 8px;
-  box-shadow: var(--box-shadow);
   background-color: var(--white);
 `;

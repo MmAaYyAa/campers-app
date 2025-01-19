@@ -1,5 +1,5 @@
 import { forwardRef } from 'react';
-import { useField, Field, ErrorMessage } from 'formik';
+import { useField, ErrorMessage } from 'formik';
 import { InputField, FieldWrapper, ErrorText } from './FormField.styled';
 
 const FormField = forwardRef(({ extraClass, icon, ...props }, ref) => {
@@ -22,7 +22,6 @@ const FormField = forwardRef(({ extraClass, icon, ...props }, ref) => {
           {...props}
           onChange={handleChange}
         />
-        {icon && icon}
         <ErrorMessage name={props.name} component={ErrorText} />
       </FieldWrapper>
     );

@@ -1,16 +1,16 @@
 import styled from "styled-components";
+import {InputField} from '../FormField/FormField.styled';
 
 export const Section =  styled.section`
   padding: 24px 12px;
-  border: 1px solid var(--gray-light);
   border-radius: 10px;
-  width: 641px;
+  width: 527px;
 `;
 
 export const Title = styled.h3`
 font-weight: 600;
   font-size: 20px;
-  line-height: 120%;
+  line-height: 1.2;
   margin-bottom: 8px;
   color: var(--main);
 `;
@@ -28,7 +28,7 @@ export const SubmitButton = styled.button`
   background-color: var(--button);
   color: var(--white);
   border: none;
-  border-radius: 5px;
+  border-radius: 200px;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -48,6 +48,8 @@ export const SubmitButton = styled.button`
 export const StyledForm = styled.form`
  display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 14px;
 `;
 

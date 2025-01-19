@@ -5,16 +5,19 @@ export const FieldWrapper = styled.div`
 `;
 
 export const InputField = styled.input`
-  padding: 8px 12px;
-  border: 1px solid var(--gray-light);
-  border-radius: 4px;
+  padding: 18px;
+  padding-right: 40px;
+  background-color: var(--inputs);
+  border: 1px solid transparent;
+  border-radius: 12px;
   width: 100%;
-  font-size: 14px;
+  font-size: 16px;
+  margin-bottom: 14px;
 
   ${({ $hasError }) =>
     $hasError &&
     css`
-      border-color: var(--button);
+      border:  1px solid var(--button);
     `}
 
   ${({ $extraClass }) =>
@@ -25,7 +28,9 @@ export const InputField = styled.input`
 `;
 
 export  const ErrorText = styled.div`
-  color: var(--button);
+   position: absolute;
   font-size: 12px;
-  margin-top: 4px;
+  color: var(--button);
+  right: 10px;
+  top: 2px;
 `;

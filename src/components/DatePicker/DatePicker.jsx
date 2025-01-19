@@ -2,9 +2,9 @@ import { useState, forwardRef } from 'react';
 import DatePicker from 'react-datepicker';
 import { registerLocale } from 'react-datepicker';
 import { enUS } from 'date-fns/locale';
-import { format, isToday } from 'date-fns';
-import { StyledDatePickerWrapper } from './DatePicker.styled';
+import { format, isToday, isPast } from 'date-fns';
 import 'react-datepicker/dist/react-datepicker.css';
+import { StyledDatePickerWrapper } from './DatePicker.styled';
 import FormField from '../FormField/FormField';
 
 const Datepicker = ({ onChange, selected }) => {
@@ -17,7 +17,7 @@ const Datepicker = ({ onChange, selected }) => {
         value={value}
         onClick={onClick}
         onFocus={(e) => {
-          setPlaceholder('Select a date after today');
+          setPlaceholder('Select a date');
           onClick(e);
         }}
         onBlur={() => {
@@ -45,9 +45,11 @@ const Datepicker = ({ onChange, selected }) => {
     registerLocale('custom-en', customLocale);
   
     const customDayClassName = (date) => {
-      return isToday(date) ? 'today' : undefined;
+      if (isToday(date)) return 'today';
+      if (isPast(date)) return 'past';
+      return undefined;
     };
-  
+
     return (
       <StyledDatePickerWrapper>
         <DatePicker
@@ -57,6 +59,8 @@ const Datepicker = ({ onChange, selected }) => {
           dateFormat="yyyy/MM/dd"
           customInput={<CustomInput />}
           dayClassName={customDayClassName}
+          minDate={new Date()} 
+         
         />
       </StyledDatePickerWrapper>
     );

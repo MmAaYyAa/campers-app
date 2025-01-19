@@ -2,9 +2,10 @@ import styled from "styled-components";
 
 export const Section = styled.section`
 border-radius: 10px;
-  padding: 44px 52px;
-  width: 631px;
-  height: 579px;
+padding: 24px 12px;
+width: 631px;
+  /* padding: 44px 52px; */
+  /* height: 579px; */
   background-color: var(--inputs);
 `;
 
@@ -13,7 +14,7 @@ export const List = styled.ul`
   gap: 8px;
   flex-wrap: wrap;
   margin-bottom: 100px;
-  
+  margin-bottom: 40px;
 `;
 
 export const ListItem = styled.li`

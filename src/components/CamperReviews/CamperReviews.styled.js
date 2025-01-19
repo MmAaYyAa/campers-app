@@ -10,14 +10,14 @@ height: 20px;
 
 export const Section = styled.section`
   width: 632px;
-  height: 579px;
+   /*height: 579px; */
   margin-top: 12px;
   
 `;
 
 export const Item = styled.li`
- margin-bottom: 44px;
-  
+ /* margin-bottom: 44px; */
+ margin-bottom: 24px;
 `;
 
 export const ReviewInfo = styled.div`

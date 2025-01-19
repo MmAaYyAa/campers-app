@@ -64,7 +64,7 @@ export default function BookingForm() {
                   placeholder="Comment"
                 />
              
-                <SubmitButton type="submit">
+                <SubmitButton type="submit" disabled={!values.name || !values.email ||!values.bookingDate}>
                   Send
                 </SubmitButton>
               </Form>
