@@ -46,6 +46,7 @@ const GlobalStyles = createGlobalStyle`
 
 
 body {
+
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-weight: 400;

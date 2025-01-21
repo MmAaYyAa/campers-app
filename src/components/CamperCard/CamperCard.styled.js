@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 export const CardContainer = styled.div`
   display: flex;
   align-items: flex-start;
-  gap: 20px;
-  padding: 20px;
+  gap: 24px;
+  padding: 24px;
   border: 1px solid var(--gray-light);
   border-radius: 20px;
   background-color: var(--white);

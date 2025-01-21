@@ -3,8 +3,9 @@ import {InputField} from '../FormField/FormField.styled';
 
 export const Section =  styled.section`
   padding: 24px 12px;
+  width: 100%; 
   border-radius: 10px;
-  width: 527px;
+  max-width: 641px;
 `;
 
 export const Title = styled.h3`
@@ -30,6 +31,7 @@ export const SubmitButton = styled.button`
   border: none;
   border-radius: 200px;
   font-size: 16px;
+  font-weight: 500;
   cursor: pointer;
   transition: background-color 0.3s;
   width: 166px;
@@ -48,8 +50,12 @@ export const SubmitButton = styled.button`
 export const StyledForm = styled.form`
  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 14px;
+  width: 100%;
 `;
 
+export const CommentField = styled(InputField)`
+  height: 118px;
+  padding: 18px 308px 76px 18px;
+  resize: none;
+`;

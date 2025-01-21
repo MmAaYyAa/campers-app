@@ -20,7 +20,7 @@ export const HeroImage = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  transform: scaleX(-1); /* Поворачивает только фон */
+  transform: scaleX(-1);
   transform-origin: center center;
 `;
 

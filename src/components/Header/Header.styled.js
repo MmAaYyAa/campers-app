@@ -12,6 +12,7 @@ z-index: 10;
   background-color:  var(--inputs);
   width: 100%;
   height: 72px;
+  padding: 28px 64px;
   border-bottom: 1px solid var(--badges);
   
 `;
@@ -21,13 +22,13 @@ position: absolute;
 top: 28px;
 left: 64px;
 width: 136px;
-height: 15px;
+height: 16px;
   
 `;
 
 export const NavList = styled.ul`
   display: flex;
-  gap: 20px;
+  gap: 32px;
   justify-content: center; 
   list-style: none;
   margin: 0;
@@ -50,3 +51,4 @@ export const StyledNavLink = styled(NavLink)`
     transition: var(--transition);
   }
 `;
+  

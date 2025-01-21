@@ -55,6 +55,7 @@ export const DetailsList = styled.ul`
 export const DetailsItem = styled.li`
 display: flex;
 justify-content: space-between;
+margin-bottom: 16px;
   
 `;
 

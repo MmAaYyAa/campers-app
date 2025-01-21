@@ -3,7 +3,7 @@ import toast from 'react-hot-toast';
 import FormField from '../FormField/FormField';
 import Datepicker from '../DatePicker/DatePicker';
 import { BookingSchema } from '../../utils/validation';
-import {Section, Title, Text, StyledForm, SubmitButton} from '../BookingForm/BookingForm.styled';
+import {Section, CommentField , Title, Text, StyledForm, SubmitButton} from '../BookingForm/BookingForm.styled';
 
 export default function BookingForm() {
   
@@ -59,7 +59,7 @@ export default function BookingForm() {
               selected={values.bookingDate}
               onChange={date => setFieldValue('bookingDate', date)}
             />
-                <FormField 
+                <CommentField 
                   name="comment"
                   placeholder="Comment"
                 />

@@ -5,7 +5,7 @@ const Header = () => {
   return (
     
     <StyledHeader>
-       
+    
       <Logo>
       <use href={`${icons}#icon-Logo`} />
       </Logo>
@@ -22,6 +22,7 @@ const Header = () => {
             <StyledNavLink to="/favorites">Favorites</StyledNavLink>
           </li> */}
         </NavList>
+       
     </StyledHeader>
     
   );

@@ -150,7 +150,7 @@ width: 130px;
 padding: 12px 24px;
   border: none;
   border-radius: 200px;
-  background-color: ${(props) => (props.disabled ? 'var(--badges)' : 'var(--button)')};
+  background-color: ${(props) => (props.disabled ? 'var(--gray-light)' : 'var(--button)')};
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;

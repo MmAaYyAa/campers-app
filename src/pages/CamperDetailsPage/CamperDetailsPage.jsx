@@ -13,10 +13,11 @@ import { selectCamperDetails, selectLoading,
     selectError,  } from '../../redux/catalog/catalogSelectors';
 import { fetchCamperById } from '../../redux/catalog/catalogOperations.js';
 import { LinkBack, Container,
-    MainContent,  ListLinks,
+  ContentWrapper,  Bottom, ListLinks,
     LinkItem,
     NavLinkStyled, Sidebar} from "./CamperDetailsPage.styled";
 import BookingForm from '../../components/BookingForm/BookingForm';    
+import ScrollToTopButton from '../../components/ScrollToTopButton/ScrollToTopButton';
 
 export default function CamperDetailsPage() {
         const dispatch = useDispatch();
@@ -46,9 +47,8 @@ export default function CamperDetailsPage() {
           {isLoading && <Loader />}
           {isError && <Error />}
           {camper && <CamperInfo camper={camper} />}
-          <MainContent>
-        <div>
-          <ListLinks>
+         
+        <ListLinks>
             <LinkItem>
               <NavLinkStyled  to="features"
             state={{ ...location.state }}>
@@ -64,14 +64,19 @@ export default function CamperDetailsPage() {
               </NavLinkStyled>
             </LinkItem>
           </ListLinks>
+          <Bottom>
+          <ContentWrapper>
+          
           <Suspense fallback={isLoading && <Loader />}>
             <Outlet />
           </Suspense>
-          </div>
+         
           <Sidebar>
           <BookingForm />
-        </Sidebar>
-      </MainContent>
+          </Sidebar>
+          </ContentWrapper>
+          </Bottom>
+          <ScrollToTopButton />
         </Container>
         </>
     );

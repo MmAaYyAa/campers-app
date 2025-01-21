@@ -133,13 +133,13 @@ export default function Filter() {
       <ButtonBlock>
         <Button
           type="submit"
-          disabled={!formState.location || !formState.camperEquipment.length || !formState.form ||!formState.transmission}
+          disabled={!formState.location &&  !formState.camperEquipment.length &&  !formState.form && !formState.transmission}
         >
           Search
         </Button>
         <Button
           type="button"
-          disabled={!formState.location || !formState.camperEquipment.length || !formState.form || !formState.transmission}
+          disabled={!formState.location &&  !formState.camperEquipment.length &&  !formState.form &&  !formState.transmission}
           onClick={handleReset}
         >
           Reset
