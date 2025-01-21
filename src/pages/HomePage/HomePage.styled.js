@@ -7,7 +7,7 @@ export const HeroSection = styled.section`
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  padding-left: 40px;
+  padding-left: 64px;
   overflow: hidden;
 `;
 

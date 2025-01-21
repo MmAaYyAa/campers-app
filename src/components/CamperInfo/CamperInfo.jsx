@@ -33,6 +33,12 @@ export default function CamperInfo({
                   ></Image>
                 </li>
               ))}
+              <li>
+                  <Image
+                    src={gallery[0].thumb}
+                    alt="photo of camper"
+                  ></Image>
+                </li>
             </List>
             <Description>{description}</Description>
         </Section>

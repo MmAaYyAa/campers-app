@@ -26,7 +26,9 @@ export default function CatalogPage() {
         <Container>
           {isLoading && <Loader />}
           {isError && <Error />}
+        
           <Filter />
+        
           <Wrapper>
           {campers.length > 0 && <CamperList />}
           {campers.length > 0 && <LoadMoreBtn />}

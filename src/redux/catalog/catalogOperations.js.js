@@ -28,7 +28,7 @@ export const fetchCampers = createAsyncThunk(
         }
       });
       if (form) {
-        const formType = form === 'van' ? 'panelTruck' : form; // Adjust form type mapping if needed
+        const formType = form === 'van' ? 'panelTruck' : form; 
         params.append('form', formType);
       }
 

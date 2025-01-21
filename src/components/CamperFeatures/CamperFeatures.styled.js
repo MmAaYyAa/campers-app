@@ -35,6 +35,7 @@ height: 20px;
     fill: none;
     stroke: var(--main);
   }
+
  
 `;
 

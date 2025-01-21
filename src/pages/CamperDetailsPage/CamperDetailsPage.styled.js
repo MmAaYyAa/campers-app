@@ -30,13 +30,6 @@ export const Container = styled.main`
  padding: 48px 64px 80px;
 `;
 
-// export const MainContent = styled.div`
-//   display: flex;
-//   justify-content: space-between;
-//   gap: 40px;
-//   margin-top: 24px;
-// `;
-
 export const ListLinks = styled.ul`
   display: flex;
   gap: 40px;

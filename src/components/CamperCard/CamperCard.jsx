@@ -25,10 +25,8 @@ export default function CamperCard ({
 }) {
   const dispatch = useDispatch();
   const favorites = useSelector(selectFavorites);
-  console.log("favorites: ",favorites)
-
   const isFavorite = favorites.includes(id);
-  console.log('isFavorite:', isFavorite);
+ 
   const handleFavoriteToggle = () => {
     if (isFavorite) {
       dispatch(removeFavorite(id));
@@ -36,6 +34,7 @@ export default function CamperCard ({
       dispatch(addFavorite(id));
     }
   };
+  
     return (
         <CardContainer>
           <Img src={gallery[0].thumb} alt={name} />

@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import {selectCamperDetails} from '../../redux/catalog/catalogSelectors';
 import {fetchCamperById} from '../../redux/catalog/catalogOperations.js';
-import {formatDimension} from '../../utils/utils.js';
+import {formatDimension, formatString} from '../../utils/utils.js';
 import icons from '../../assets/icons/sprite.svg';
 import { Section, List, ListItem, Icon, Title,  DetailsList, DetailsItem, Details} from '../CamperFeatures/CamperFeatures.styled';
 
@@ -11,7 +11,6 @@ export default function CamperFeatures() {
     const dispatch = useDispatch();
     const { id } = useParams();
     const camper = useSelector(selectCamperDetails);
-    console.log('camper: ', camper);
 
     const {
         radio = false,
@@ -57,9 +56,10 @@ useEffect(() => {
       )}
       {gas && (
         <ListItem>
-          <Icon>
+          <Icon className="stroke-icon">
       <use href={`${icons}#icon-gas`} />
       </Icon>
+      <p>Gas</p>
         </ListItem>
       )}
       {kitchen && (
@@ -123,7 +123,7 @@ useEffect(() => {
     <DetailsList>
       <DetailsItem>
         <Details>Form</Details>
-        <Details>{form}</Details>
+        <Details>{formatString(form)}</Details>
       </DetailsItem>
       <DetailsItem>
         <Details>Length</Details>
