@@ -45,7 +45,7 @@ export const HeroButton = styled.button`
   background-color: var(--button);
   color: var(--white);
   border: none;
-  padding: 10px 20px;
+  padding: 16px 60px;
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
