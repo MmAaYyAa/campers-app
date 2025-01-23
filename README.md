@@ -1,8 +1,16 @@
-# React + Vite
+Frontend part of the application for "TravelTrucks" company for choosing and booking a camper.Includes a home page,a catalog page with filters and a camper's details page with reviews and booking form.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#Usage:
+To run developer server at localhost use:
 
-Currently, two official plugins are available:
+"npm install";
+"npm run dev";
+open live page on localhost with port that you see in console of your IDE;
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+or
+
+to open Vercel live page follow the link
+
+
+##Author:[https://github.com/MmAaYyAa]
+
